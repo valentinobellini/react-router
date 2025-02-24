@@ -7,7 +7,9 @@ export default function Header() {
 
     return (
         <>
-            <Navbar />
+            <header>
+                <Navbar />
+            </header>
 
         </>
     )

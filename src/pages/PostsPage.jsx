@@ -1,10 +1,9 @@
-export default function Posts() {
+
+
+export default function PostsPage() {
 
 
     return (
-        <>
-            <h2>posts</h2>
-
-        </>
-    )
+        
+    );
 }
