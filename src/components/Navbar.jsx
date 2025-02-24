@@ -9,13 +9,13 @@ export default function Navbar() {
             <div className="container">
                 <ul>
                     <li >
-                        <NavLink to='/home'></NavLink>
+                        <NavLink to='/home'>HOME</NavLink>
                     </li>
                     <li >
-                        <NavLink to='/posts'></NavLink>
+                        <NavLink to='/posts'>POSTS</NavLink>
                     </li>
                     <li >
-                        <NavLink to='/about'></NavLink>
+                        <NavLink to='/about'>ABOUT</NavLink>
                     </li>
                 </ul>
             </div>
