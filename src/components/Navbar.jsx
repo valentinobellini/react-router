@@ -9,7 +9,7 @@ export default function Navbar() {
             <div className="navbar-container">
                 <ul>
                     <li >
-                        <NavLink to='/home'>HOME</NavLink>
+                        <NavLink to='/'>HOME</NavLink>
                     </li>
                     <li >
                         <NavLink to='/posts'>POSTS</NavLink>
