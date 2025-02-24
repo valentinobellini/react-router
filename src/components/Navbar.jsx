@@ -6,7 +6,7 @@ export default function Navbar() {
 
     return (
         <>
-            <div className="container">
+            <div className="navbar-container">
                 <ul>
                     <li >
                         <NavLink to='/home'>HOME</NavLink>
