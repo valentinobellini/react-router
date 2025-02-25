@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -21,11 +22,16 @@ export default function PostDetail() {
 
     useEffect(
         () => fetchPosts(),
-        [])
+        [id])
 
 
     return (
         <>
+            <nav>
+                <Link to={`/posts/${parseInt(id) - 1}`}>Prev</Link>
+                <Link to={`/posts/${parseInt(id) + 1}`}>Next</Link>
+            </nav>
+
             <div className="detail-container">
                 <h3>{post.title}</h3>
                 <p className="content">{post.content}</p>
