@@ -89,3 +89,14 @@ footer {
   margin-top: 2rem;
   font-family: "Montserrat", sans-serif;
 }
+
+
+
+
+
+/* detailpage style */
+
+.detail-container {
+  width: 70%;
+  margin: 0 auto;
+}

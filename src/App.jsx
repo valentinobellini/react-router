@@ -15,9 +15,7 @@ import MainLayout from './layouts/MainLayout'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import PostsPage from './pages/PostsPage'
-
-
-//importa componenti
+import PostDetailPage from './pages/PostDetailPage'
 
 
 function App() {
@@ -29,7 +27,10 @@ function App() {
         <Routes>
           <Route element={<MainLayout />} >
             <Route path="/" element={<HomePage />} />
-            <Route path="/posts" element={<PostsPage />} />
+            <Route path='/posts'>
+              <Route index element={<PostsPage />} />
+              <Route path=':id' element={<PostDetailPage />} />
+            </Route>
             <Route path="/about" element={<AboutPage />} />
           </Route>
         </Routes>

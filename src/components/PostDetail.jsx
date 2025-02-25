@@ -10,25 +10,30 @@ export default function PostDetail() {
     const { id } = useParams();
 
     //  setta stato del componente
-    const [pizza, setPizza] = useState({});
+    const [post, setPost] = useState({});
 
     // funzione di chiamata verso la rotta store
-    function fetchPizza() {
-        axios.get(`http://localhost:3000/pizzas/${id}`)
-            .then(res => setPizza(res.data))
+    function fetchPosts() {
+        axios.get(`http://localhost:3000/posts/${id}`)
+            .then(res => setPost(res.data))
             .catch(err => console.log(err))
     }
 
     useEffect(
-        () => fetchPizza(),
+        () => fetchPosts(),
         [])
 
 
     return (
         <>
-            <h2>Ciao sono la pagina di dettaglio della Pizza {pizza.name}</h2>
-            <img src={pizza.image} alt={pizza.name} />
-            {/* <p>{pizza.ingredients.join(", ")}</p> */}
+            <div className="detail-container">
+                <h3>{post.title}</h3>
+                <p className="content">{post.content}</p>
+                <div className="post-lower-wrapper">
+                    <span>Autore: {post.author}</span>
+                    <span className="category">Categoria: {post.category}</span>
+                </div>
+            </div>
         </>
     );
 }
